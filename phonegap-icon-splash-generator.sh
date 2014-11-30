@@ -28,20 +28,23 @@ $convert "$1" -resize 96x96 "$3/resources/icons/icon-96.png"
 
 
 # Splash screens
-$convert "$1" -extent 320x480  "$3/resources/splash/splash-320x480.png"
-$convert "$1" -extent 640x960  "$3/resources/splash/splash-320x480@2x.png"
-$convert "$1" -extent 640x1136  "$3/resources/splash/splash-320x568@2x.png"
-$convert "$1" -extent 786x1024  "$3/resources/splash/splash-768x1024.png"
-$convert "$1" -extent 1536x2048  "$3/resources/splash/splash-768x1024@2x.png"
-$convert "$1" -extent 1024x768  "$3/resources/splash/splash-1024x768.png"
-$convert "$1" -extent 2048x1536  "$3/resources/splash/splash-1024x768@2x.png"
+convert="convert $4 -background $2 -gravity center"
+
+
+$convert -resize 320x320 -extent 320x480  "$3/resources/splash/splash-320x480.png"
+$convert -resize 640x640 -extent 640x960  "$3/resources/splash/splash-320x480@2x.png"
+$convert -resize 640x640 -extent 640x1136  "$3/resources/splash/splash-320x568@2x.png"
+$convert -resize 640x640 -extent 786x1024  "$3/resources/splash/splash-768x1024.png"
+$convert -resize 1024x1024 -extent 1536x2048  "$3/resources/splash/splash-768x1024@2x.png"
+$convert -resize 640x640 -extent 1024x768  "$3/resources/splash/splash-1024x768.png"
+$convert -resize 1024x1024 -extent 2048x1536  "$3/resources/splash/splash-1024x768@2x.png"
 
 # Android
-$convert "$1" -extent 200x320  "$3/resources/splash/splash-200x320.png"
-$convert "$1" -extent 320x200  "$3/resources/splash/splash-320x200.png"
-$convert "$1" -extent 480x320  "$3/resources/splash/splash-480x320.png"
-$convert "$1" -extent 480x800  "$3/resources/splash/splash-480x800.png"
-$convert "$1" -extent 800x480  "$3/resources/splash/splash-800x480.png"
-$convert "$1" -extent 720x1280  "$3/resources/splash/splash-720x1280.png"
-$convert "$1" -extent 1280x720  "$3/resources/splash/splash-1280x720.png"
+$convert -resize 180x180 -extent 200x320  "$3/resources/splash/splash-200x320.png"
+$convert -resize 180x180 -extent 320x200  "$3/resources/splash/splash-320x200.png"
+$convert -resize 256x256 -extent 480x320  "$3/resources/splash/splash-480x320.png"
+$convert -resize 256x256 -extent 480x800  "$3/resources/splash/splash-480x800.png"
+$convert -resize 256x256 -extent 800x480  "$3/resources/splash/splash-800x480.png"
+$convert -resize 512x512 -extent 720x1280  "$3/resources/splash/splash-720x1280.png"
+$convert -resize 512x512 -extent 1280x720  "$3/resources/splash/splash-1280x720.png"
 
