@@ -3,6 +3,13 @@
 # Copyright 2013 Tom Vincent <http://tlvince.com/contact>
 
 # ./last.sh logo_small.png "#555555" ./resources logo_small.png
+# ./meteor.sh WorldDurakFinal.png   "#0E0E0E"   testdir  .png
+# durak 22.11.2017: ./last.sh app-icon.png "#030E16" ./durak logo-wordDurak.ai
+# 1. icons image
+# 2. splash background color
+# 3. destination directory
+# 4. splash image
+
 usage() { echo "usage: $0 icon color [dest_dir] [full_icon]"; exit 1; }
 
 [ "$1" ] && [ "$2" ] || usage
@@ -30,11 +37,11 @@ $convert  120x120 "$3/iphone_2x.icon.png"
 $convert  180x180 "$3/iphone_3x.icon.png"
 $convert  60x60 "$3/iphone.icon.png"
 
-$convert  167x167 "$3/resources/ipad_pro.icon.png"
-$convert  29x29 "$3/resources/ios_settings.icon.png"
-$convert  58x58 "$3/resources/ios_settings_2x.icon.png"
-$convert  40x40 "$3/resources/ios_spotlight.icon.png"
-$convert  80x80 "$3/resources/ios_spotlight_2x.icon.png"
+$convert  167x167 "$3/ipad_pro.icon.png"
+$convert  29x29 "$3/ios_settings.icon.png"
+$convert  58x58 "$3/ios_settings_2x.icon.png"
+$convert  40x40 "$3/ios_spotlight.icon.png"
+$convert  80x80 "$3/ios_spotlight_2x.icon.png"
 
 
 convert="convert $4 -background $2 -gravity center"
